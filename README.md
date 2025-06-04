@@ -42,6 +42,7 @@
 <p align="left">
     <img width="580" alt="Image" src="https://github.com/user-attachments/assets/c5ac3989-7464-423d-ae55-f4f64761196c" />
 </p>
+
 - **IoT Dev.(Java):** 데이터셋을 실제 측정 장비처럼 구현하기 위해 장비 시리얼 넘버로 구분된 5개의 데이터 파일에서 매분마다 한줄씩 순서대로 읽어서 하나의 CSV파일에 기록.
 - **CSV File(Filebeat):** CSV파일에 데이터가 쓰일때마다 Filebeat가 해당 데이터를 수집하여 Kafka로 전송.
 - **Apache Kafka:** Filebeat에서 수집한 실시간 데이터들을 토픽으로 구분하여 분산 저장.
