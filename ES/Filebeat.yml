@@ -1,0 +1,23 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - "/home/elastic/seocho/IoTdata.csv"  
+
+
+output.kafka:
+  hosts: ["IP:port"]  # Kafka 브로커 주소
+  topic: "seochoguinside_data"  # Kafka로 보낼 토픽명
+  partition.round_robin:
+    reachable_only: true
+  required_acks: 1
+  compression: gzip
+  max_message_bytes: 1000000
+
+logging.level: info
+logging.to_files: true
+logging.files:
+  path: "/var/log/filebeat"
+  name: "filebeat.log"
+  keepfiles: 7
+  permissions: 0644
